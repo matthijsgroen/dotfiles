@@ -1,0 +1,12 @@
+alias be='bundle exec'
+alias br='be rake'
+alias cu='be cucumber'
+alias wip='br cucumber:wip'
+alias sp='bundle exec rspec'
+
+alias r='rails'
+alias r2g='be ruby script/generate'
+alias r2s='be ruby script/server'
+
+alias ra='source ~/.aliasses'
+

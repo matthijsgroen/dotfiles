@@ -1,0 +1,12 @@
+[user]
+	name = Matthijs Groen
+	email = matthijs.groen@gmail.com
+[push]
+	default = current
+[core]
+	editor = vim
+
+[color]
+  diff = auto
+  branch = auto
+  status = auto
