@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+git submodule init
+git submodule update
+
 here="$(dirname "$0")"
 here="$(cd "$here"; pwd)"
 
