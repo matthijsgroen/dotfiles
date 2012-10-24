@@ -1,4 +1,11 @@
 let g:Powerline_symbols = 'fancy'
 
-autocmd BufWritePre * :%s/\s\+$//e
-
+" Automatically removing all trailing whitespace
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  %s/\t/  /ge
+  call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
