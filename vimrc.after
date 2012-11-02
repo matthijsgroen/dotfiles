@@ -8,4 +8,6 @@ fun! <SID>StripTrailingWhitespaces()
   %s/\t/  /ge
   call cursor(l, c)
 endfun
+
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+au! BufRead,BufNewFile *.hamlc setfiletype haml
