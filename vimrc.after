@@ -11,3 +11,5 @@ endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
+
+map <Leader>rt :!silent ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp --recurse=yes * `rvm gemdir`/gems/*<CR><CR>
