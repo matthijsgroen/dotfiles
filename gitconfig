@@ -1,12 +1,17 @@
 [user]
-	name = Matthijs Groen
-	email = matthijs.groen@gmail.com
+  name = Matthijs Groen
+  email = matthijs.groen@gmail.com
 [push]
-	default = current
+  default = current
 [core]
-	editor = vim
+  editor = vim
 
 [color]
   diff = auto
   branch = auto
   status = auto
+
+[aliases]
+  track = "!f(){ branch=$(git name-rev --name-only HEAD); cmd=\"git branch --set-upstream $branch ${1:-origin}/${2:-$branch}\"; echo $cmd; $cmd; }; f"
+
+
