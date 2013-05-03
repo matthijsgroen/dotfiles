@@ -11,7 +11,7 @@
   branch = auto
   status = auto
 
-[aliases]
+[alias]
   track = "!f(){ branch=$(git name-rev --name-only HEAD); cmd=\"git branch --set-upstream $branch ${1:-origin}/${2:-$branch}\"; echo $cmd; $cmd; }; f"
-
+  releasenotes = "!git log ${1}.. --pretty=format:'%h - %Cgreen%ad%Creset - %an: %C(bold white)%s%Creset' --grep=pivotal --date=short"
 
