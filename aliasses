@@ -11,3 +11,10 @@ alias r2s='be ruby script/server'
 
 alias ra='source ~/.aliasses'
 
+# http://robots.thoughtbot.com/post/15346721484/use-bundlers-binstubs
+alias bi="bundle install --binstubs=.bin --path vendor/bundle"
+export PATH="./.bin:$PATH"
+#export PATH="./script:$PATH" # for rails script that already run bundler setup
+
+
+
