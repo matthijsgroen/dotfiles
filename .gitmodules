@@ -7,3 +7,6 @@
 [submodule "janus/ruby-refactoring"]
 	path = janus/ruby-refactoring
 	url = https://github.com/ecomba/vim-ruby-refactoring
+[submodule "janus/blockle"]
+	path = janus/blockle
+	url = git://github.com/jgdavey/vim-blockle.git
