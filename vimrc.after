@@ -8,6 +8,7 @@ fun! <SID>StripTrailingWhitespaces()
   %s/\t/  /ge
   call cursor(l, c)
 endfun
+let g:ctrlp_root_markers = ['Gemfile', '.git']
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
