@@ -14,3 +14,8 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
 
 map <Leader>rt :!silent ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp --recurse=yes * `rvm gemdir`/gems/*<CR><CR>
+
+" Set leader to , just for the example but it could be anything you
+" choose.
+map <Leader>h1 VypVr=
+map <Leader>h2 VypVr-
