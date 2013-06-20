@@ -1,7 +1,7 @@
 alias be='bundle exec'
 alias br='be rake'
-alias cu='be cucumber'
-alias wip='be cucumber -r features -p wip'
+alias cu='cucumber 2> /dev/null'
+alias wip='cucumber -r features -p wip 2> /dev/null'
 alias sp='bundle exec rspec'
 alias p='bundle exec pt'
 
