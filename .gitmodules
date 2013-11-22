@@ -10,3 +10,6 @@
 [submodule "janus/blockle"]
 	path = janus/blockle
 	url = git://github.com/jgdavey/vim-blockle.git
+[submodule "janus/vim-airline"]
+	path = janus/vim-airline
+	url = https://github.com/bling/vim-airline
