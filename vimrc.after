@@ -9,7 +9,7 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 let g:ctrlp_root_markers = ['Gemfile', '.git']
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/bundle/*,*/.bundle/*,*/.git/*,*/doc/app/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/bundle/*,*/.bundle/*,*/.git/*,*/doc/app/*,*/spec/reports/*
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
