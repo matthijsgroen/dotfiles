@@ -16,5 +16,5 @@ alias bi="bundle install --binstubs=.bin --path vendor/bundle"
 export PATH="./.bin:$PATH"
 #export PATH="./script:$PATH" # for rails script that already run bundler setup
 
-
+alias cmapa='git commit --amend --author="Matthijs en Patrick <matthijs+patrick@kabisa.nl>"'
 

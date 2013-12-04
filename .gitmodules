@@ -13,3 +13,9 @@
 [submodule "janus/vim-airline"]
 	path = janus/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule ".tmux-plugins/battery"]
+	path = .tmux-plugins/battery
+	url = https://github.com/richo/battery.git
+[submodule "tmux-plugins/battery"]
+	path = tmux-plugins/battery
+	url = https://github.com/richo/battery.git
