@@ -11,6 +11,10 @@ endfun
 let g:ctrlp_root_markers = ['Gemfile', '.git']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/bundle/*,*/.bundle/*,*/.git/*,*/doc/app/*,*/spec/reports/*
 
+set cursorline
+hi CursorLine term=underline cterm=underline
+:highlight Search cterm=underline ctermfg=yellow ctermbg=black
+
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
 
