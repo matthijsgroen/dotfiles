@@ -24,3 +24,6 @@ map <Leader>rt :!silent ctags --extra=+f --exclude=.git --exclude=log --exclude=
 " choose.
 map <Leader>h1 VypVr=
 map <Leader>h2 VypVr-
+
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
