@@ -26,4 +26,4 @@ map <Leader>h1 VypVr=
 map <Leader>h2 VypVr-
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-
+let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
