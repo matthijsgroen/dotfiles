@@ -1,6 +1,0 @@
-session:
-  windows:
-    - name: "Chat"
-      panes:
-        - cmd: "irssi"
-
