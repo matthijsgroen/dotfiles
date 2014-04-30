@@ -19,3 +19,6 @@
 [submodule "tmux-plugins/battery"]
 	path = tmux-plugins/battery
 	url = https://github.com/richo/battery.git
+[submodule "janus/emmet-vim"]
+	path = janus/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
