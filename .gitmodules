@@ -1,30 +1,42 @@
 [submodule "janus/powerline"]
-	path = janus/powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
+  path = janus/powerline
+  url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "janus/tabular"]
-	path = janus/tabular
-	url = https://github.com/godlygeek/tabular
+  path = janus/tabular
+  url = https://github.com/godlygeek/tabular
 [submodule "janus/ruby-refactoring"]
-	path = janus/ruby-refactoring
-	url = https://github.com/ecomba/vim-ruby-refactoring
+  path = janus/ruby-refactoring
+  url = https://github.com/ecomba/vim-ruby-refactoring
 [submodule "janus/blockle"]
-	path = janus/blockle
-	url = git://github.com/jgdavey/vim-blockle.git
+  path = janus/blockle
+  url = git://github.com/jgdavey/vim-blockle.git
 [submodule "janus/vim-airline"]
-	path = janus/vim-airline
-	url = https://github.com/bling/vim-airline
+  path = janus/vim-airline
+  url = https://github.com/bling/vim-airline
 [submodule ".tmux-plugins/battery"]
-	path = .tmux-plugins/battery
-	url = https://github.com/richo/battery.git
+  path = .tmux-plugins/battery
+  url = https://github.com/richo/battery.git
 [submodule "tmux-plugins/battery"]
-	path = tmux-plugins/battery
-	url = https://github.com/richo/battery.git
+  path = tmux-plugins/battery
+  url = https://github.com/richo/battery.git
 [submodule "janus/emmet-vim"]
-	path = janus/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
+  path = janus/emmet-vim
+  url = https://github.com/mattn/emmet-vim.git
 [submodule "janus/vim-spec"]
-	path = janus/vim-spec
-	url = https://github.com/michel/vim-spec.git
+  path = janus/vim-spec
+  url = https://github.com/michel/vim-spec.git
 [submodule "janus/vim-rubocop"]
-	path = janus/vim-rubocop
-	url = https://github.com/ngmy/vim-rubocop.git
+  path = janus/vim-rubocop
+  url = https://github.com/ngmy/vim-rubocop.git
+[submodule "janus/vimux"]
+  path = janus/vimux
+  url = https://github.com/benmills/vimux.git
+[submodule "janus/vim-turbux"]
+  path = janus/vim-turbux
+  url = https://github.com/jgdavey/vim-turbux.git
+[submodule "janus/vimux-ruby-test"]
+  path = janus/vimux-ruby-test
+  url = https://github.com/pgr0ss/vimux-ruby-test.git
+[submodule "fork"]
+	path = janus/vim-vroom
+	url = https://github.com/matthijsgroen/vim-vroom.git

@@ -7,7 +7,7 @@
 
 [core]
   editor = vim
-  excludesfile = ~/.gitignore.global
+	excludesfile = /Users/matthijsgroen/.gitignore.global
 
 [color]
   diff = auto
@@ -15,6 +15,15 @@
   status = auto
 
 [alias]
-  track = "!f(){ branch=$(git name-rev --name-only HEAD); cmd=\"git branch --set-upstream $branch ${1:-origin}/${2:-$branch}\"; echo $cmd; $cmd; }; f"
-  releasenotes = "!git log ${1}.. --pretty=format:'%h - %Cgreen%ad%Creset - %an: %C(bold white)%s%Creset' --grep=pivotal --date=short"
+  dense-releasenotes = "!git log ${1}.. --pretty=format:'%h - %Cgreen%ad%Creset - %an: %C(bold white)%s%Creset' --grep=pivotal --date=short"
+  releasenotes = "!git log ${1}.. --pretty=format:'## %s%Creset%n%n%body%n%n' --grep=pivotal --date=short"
+  new-releasenotes = "!git releasenotes $(git latest-release)"
+  releases = "!git tag -l | grep '^[0-9]*\\.[0-9]*\\.[0-9]*$' | sort -r -t. -k1,1n -k2,2n -k3,3n"
+  latest-release = "!git releases | tail -1"
 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
