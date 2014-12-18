@@ -1,4 +1,6 @@
 set shell=bash
 
+" Disable the default supplied 'vroom' so we can load a custom one (with
+" konacha support)
 call janus#disable_plugin('vroom')
 
