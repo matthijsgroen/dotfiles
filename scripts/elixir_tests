@@ -1,5 +1,15 @@
 #!/bin/bash
-if mix test "$@" ; then
+
+if [ $# -eq 0 ]; then
+  TEST=`cat ~/.last-elixir-test`
+else
+  echo "$@" > ~/.last-elixir-test
+  TEST=$@
+fi
+
+COMMAND="mix test ${TEST}"
+
+if $COMMAND ; then
   tmux set status-left-bg "#008000"
 else
   tmux set status-left-bg "#800000"
