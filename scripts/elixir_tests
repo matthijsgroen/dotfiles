@@ -1,0 +1,6 @@
+#!/bin/bash
+if mix test "$@" ; then
+  tmux set status-left-bg "#008000"
+else
+  tmux set status-left-bg "#800000"
+fi

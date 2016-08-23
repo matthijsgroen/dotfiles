@@ -68,5 +68,7 @@ let g:vroom_use_vimux = 1
 let g:vroom_use_spring = 1
 let g:vroom_use_zeus = 0
 
+map <Leader>et :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p') . ':' . line('.'))<CR>
+
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
