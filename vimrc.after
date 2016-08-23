@@ -70,6 +70,7 @@ let g:vroom_use_zeus = 0
 
 map <Leader>et :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p') . ':' . line('.'))<CR>
 map <Leader>ef :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p'))<CR>
+map <Leader>ea :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests all')<CR>
 map <Leader>el :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests')<CR>
 
 cnoreabbrev Ack Ack!
