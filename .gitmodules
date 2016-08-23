@@ -40,3 +40,6 @@
 [submodule "fork"]
 	path = janus/vim-vroom
 	url = https://github.com/matthijsgroen/vim-vroom.git
+[submodule "janus/ack"]
+	path = janus/ack
+	url = https://github.com/mileszs/ack.vim.git
