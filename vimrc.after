@@ -15,7 +15,7 @@ set cursorline
 hi CursorLine term=underline cterm=underline
 :highlight Search cterm=underline ctermfg=yellow ctermbg=black
 
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+"autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
 
 map <Leader>rt :!silent ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp --recurse=yes * `rvm gemdir`/gems/*<CR><CR>
@@ -26,7 +26,10 @@ map <Leader>h1 VypVr=
 map <Leader>h2 VypVr-
 
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType haml setlocal shiftwidth=4 tabstop=4
+
 let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
+let g:jsx_ext_required = 0
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -73,5 +76,13 @@ map <Leader>ef :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand
 map <Leader>ea :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests all')<CR>
 map <Leader>el :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests')<CR>
 
+map <Leader>pl :execute 'silent !plantuml ' . expand('%') . ' &'<CR>:redraw!<CR>
+map <Leader>pj :execute 'silent !prettier --write ' . expand('%')<CR>:e!<CR>redraw!<CR>
+map <Leader>v :call VimuxRunLastCommand()<CR>
+
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+
+autocmd FileType make setlocal noexpandtab
+
+color desert

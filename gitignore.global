@@ -1,5 +1,7 @@
 /.bin
 /.bundle
 /vendor/bundle
-tags
+/tags
 .DS_Store
+.pt
+docs/matthijs-todo.md

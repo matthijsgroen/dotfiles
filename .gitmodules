@@ -43,3 +43,9 @@
 [submodule "janus/ack"]
 	path = janus/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "janus/vim-jsx"]
+	path = janus/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "janus/vim-prettier"]
+	path = janus/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git
