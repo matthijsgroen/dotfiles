@@ -1,7 +1,7 @@
 [user]
   name = Matthijs Groen
-  email = matthijs.groen@gmail.com
-	signingkey = 1F5E1DDC95CC3A6E
+  email = matthijs@kabisa.nl
+	signingkey = 75D0A5D0
 
 [push]
   default = current
@@ -35,3 +35,5 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+[gpg]
+	program = gpg2

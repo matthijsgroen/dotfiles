@@ -49,3 +49,6 @@
 [submodule "janus/vim-prettier"]
 	path = janus/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "janus/vim-glsl"]
+	path = janus/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl

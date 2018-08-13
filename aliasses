@@ -10,6 +10,7 @@ alias r2g='be ruby script/generate'
 alias r2s='be ruby script/server'
 
 alias ra='source ~/.aliasses'
+alias :q=exit
 
 # http://robots.thoughtbot.com/post/15346721484/use-bundlers-binstubs
 alias bi="bundle install --binstubs=.bin --path vendor/bundle"
