@@ -78,12 +78,22 @@ map <Leader>ea :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests all')<CR>
 map <Leader>el :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests')<CR>
 
 map <Leader>pl :execute 'silent !plantuml ' . expand('%') . ' &'<CR>:redraw!<CR>
-map <Leader>pj :execute 'silent !prettier --write ' . expand('%')<CR>:e!<CR>redraw!<CR>
 map <Leader>v :call VimuxRunLastCommand()<CR>
 
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 autocmd FileType make setlocal noexpandtab
+
+let g:prettier#autoformat = 0
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#parser = 'babylon'
+let g:prettier#config#parser = 'babylon'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#single_quote = 'false'
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
 
 color desert
