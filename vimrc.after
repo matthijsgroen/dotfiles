@@ -19,6 +19,8 @@ hi CursorLine term=underline cterm=underline
 au! BufRead,BufNewFile *.hamlc setfiletype haml
 autocmd! BufNewFile,BufRead *.vs,*.fs set ft=glsl
 
+au! BufRead,BufNewFile *.ebnf setfiletype w3c-ebnf
+
 map <Leader>rt :!silent ctags --options=ctags_options .<CR><CR>
 
 " Set leader to , just for the example but it could be anything you
@@ -94,6 +96,6 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#single_quote = 'false'
 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
+autocmd BufWritePre *.js PrettierAsync
 
 color desert

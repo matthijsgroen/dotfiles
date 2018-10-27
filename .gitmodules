@@ -52,3 +52,6 @@
 [submodule "janus/vim-glsl"]
 	path = janus/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl
+[submodule "janus/w3c-ebnf.vim"]
+	path = janus/w3c-ebnf.vim
+	url = https://github.com/matthijsgroen/w3c-ebnf.vim
