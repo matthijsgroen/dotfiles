@@ -52,6 +52,12 @@
 [submodule "janus/vim-glsl"]
 	path = janus/vim-glsl
 	url = https://github.com/tikhomirov/vim-glsl
-[submodule "janus/w3c-ebnf.vim"]
-	path = janus/w3c-ebnf.vim
-	url = https://github.com/matthijsgroen/w3c-ebnf.vim
+[submodule "janus/ebnf.vim"]
+	path = janus/ebnf.vim
+	url = https://github.com/vim-scripts/ebnf.vim.git
+[submodule "janus/vim-jison"]
+	path = janus/vim-jison
+	url = https://github.com/wizicer/vim-jison.git
+[submodule "janus/ale"]
+	path = janus/ale
+	url = https://github.com/w0rp/ale

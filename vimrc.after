@@ -15,11 +15,11 @@ set cursorline
 hi CursorLine term=underline cterm=underline
 :highlight Search cterm=underline ctermfg=yellow ctermbg=black
 
-"autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.js,*.ebnf,*.css,*.scss,*.ts :call <SID>StripTrailingWhitespaces()
 au! BufRead,BufNewFile *.hamlc setfiletype haml
 autocmd! BufNewFile,BufRead *.vs,*.fs set ft=glsl
 
-au! BufRead,BufNewFile *.ebnf setfiletype w3c-ebnf
+au! BufRead,BufNewFile *.ebnf setfiletype ebnf
 
 map <Leader>rt :!silent ctags --options=ctags_options .<CR><CR>
 
@@ -46,6 +46,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" Jump to next error of 'ale' (eslins, sasslint, etc)
+nnoremap , :ll<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -96,6 +99,6 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#single_quote = 'false'
 
-autocmd BufWritePre *.js PrettierAsync
+autocmd BufWritePre *.js,*.json PrettierAsync
 
 color desert
