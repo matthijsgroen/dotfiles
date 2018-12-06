@@ -61,3 +61,6 @@
 [submodule "janus/ale"]
 	path = janus/ale
 	url = https://github.com/w0rp/ale
+[submodule "janus/vim-multiple-cursors"]
+	path = janus/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
