@@ -64,3 +64,9 @@
 [submodule "janus/vim-multiple-cursors"]
 	path = janus/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "janus/limelight.vim"]
+	path = janus/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
+[submodule "janus/goyo.vim"]
+	path = janus/goyo.vim
+	url = https://github.com/junegunn/goyo.vim

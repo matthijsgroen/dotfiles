@@ -4,4 +4,6 @@
 /tags
 .DS_Store
 .pt
+.pt.json
+/junk/
 /**/todo-matthijs.md

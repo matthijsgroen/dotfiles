@@ -28,8 +28,10 @@ map <Leader>rt :!silent ctags --options=ctags_options .<CR><CR>
 map <Leader>h1 VypVr=
 map <Leader>h2 VypVr-
 
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS ts=2 sw=2 sts=2
 autocmd FileType haml setlocal shiftwidth=4 tabstop=4
+autocmd FileType css set ts=4 sw=4 sts=4      " CSS:        tab = 4 spaces
+autocmd FileType scss set ts=4 sw=4 sts=4     " SASS:       tab = 4 spaces
 
 let g:tlist_coffee_settings = 'coffee;f:function;v:variable'
 let g:jsx_ext_required = 0
@@ -48,7 +50,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Jump to next error of 'ale' (eslins, sasslint, etc)
-nnoremap , :ll<CR>
+nmap <silent> <Leader><  <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>>  <Plug>(ale_next_wrap)
+nmap <silent> <Leader>?  <Plug>(ale_detail)
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -67,15 +71,6 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
-
-" Rubocop.vim
-let g:vimrubocop_keymap = 0
-nmap <Leader>rc :RuboCop<CR>
-
-let g:vroom_cucumber_path = 'cucumber'
-let g:vroom_use_vimux = 1
-let g:vroom_use_spring = 1
-let g:vroom_use_zeus = 0
 
 map <Leader>et :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p') . ':' . line('.'))<CR>
 map <Leader>ef :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p'))<CR>
@@ -98,7 +93,24 @@ let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#single_quote = 'false'
+let g:prettier#config#prose_wrap = 'always'
 
-autocmd BufWritePre *.js,*.json PrettierAsync
+autocmd BufWritePre *.js,*.json,*.md PrettierAsync
+
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+function! s:goyo_enter()
+  Limelight
+  set scrolloff=999
+endfunction
+
+function! s:goyo_leave()
+  Limelight!
+  set scrolloff=3
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 color darcula
