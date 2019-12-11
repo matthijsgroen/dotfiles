@@ -1,4 +1,7 @@
 let g:airline_powerline_fonts = 1
+let g:markdown_syntax_conceal = 0
+let g:markdown_fenced_languages = ['html', 'python', 'javascript=javascript', 'bash=sh']
+command Todo noautocmd vimgrep /\CTODO\|FIXME\|TEDOEN\|AANPASSEN\|NOTE\|NOTITIE\|XXX/j % | cw
 
 " Automatically removing all trailing whitespace
 fun! <SID>StripTrailingWhitespaces()
@@ -9,7 +12,7 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 let g:ctrlp_root_markers = ['Gemfile', '.git']
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/bundle/*,*/.bundle/*,*/.git/*,*/doc/app/*,*/spec/reports/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/bundle/*,*/.bundle/*,*/.git/*,*/node_modules/*
 
 set cursorline
 hi CursorLine term=underline cterm=underline
@@ -72,13 +75,7 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
-map <Leader>et :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p') . ':' . line('.'))<CR>
-map <Leader>ef :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests ' . expand('%:p'))<CR>
-map <Leader>ea :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests all')<CR>
-map <Leader>el :call VimuxRunCommand('~/dotfiles/scripts/elixir_tests')<CR>
-
 map <Leader>pl :execute 'silent !plantuml ' . expand('%') . ' &'<CR>:redraw!<CR>
-map <Leader>v :call VimuxRunLastCommand()<CR>
 
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
@@ -95,7 +92,7 @@ let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#prose_wrap = 'always'
 
-autocmd BufWritePre *.js,*.json,*.md PrettierAsync
+autocmd BufWritePre *.js,*.json,*.md,*.ts,*.tsx PrettierAsync
 
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240

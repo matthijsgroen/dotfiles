@@ -1,7 +1,7 @@
 [user]
   name = Matthijs Groen
-  email = matthijs@kabisa.nl
-	signingkey = 75D0A5D0
+  email = matthijs.groen@gmail.com
+	signingkey = 6FEA685A84F4D1EF
 
 [push]
   default = current
