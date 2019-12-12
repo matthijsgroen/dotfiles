@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+git branch --merged | grep -v master | grep -v '^\*' | cut -d " " -f3 | xargs git branch -d

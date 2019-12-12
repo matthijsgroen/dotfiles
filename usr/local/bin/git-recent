@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+git checkout $(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf --reverse)

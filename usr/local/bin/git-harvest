@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+const { execSync } = require("child_process");
+const author = execSync( `git config user.name`).toString().trim();
+const result = execSync(
+  `git log --pretty=format:"%ai - %h - %s" --reverse --all --since=10.days.ago --author='${author}'`
+);
+const coAuthorResult = execSync(
+  `git log --pretty=format:"%ai - %h - %s" --reverse --all --since=10.days.ago --grep='Co-authored-by: ${author}'`
+);
+
+const bold = x => `\u001b[1m${x}\u001b[0m`;
+const yellow = x => `\u001b[33m${x}\u001b[0m`;
+const writeln = line => process.stdout.write(line + "\n");
+const commitLines = result
+  .toString()
+  .split("\n")
+  .concat(
+    coAuthorResult
+    .toString()
+    .split("\n")
+  )
+  .filter((line, index, list) => list.indexOf(line) === index)
+  .sort();
+
+let currentOutputDate = null;
+commitLines.forEach(line => {
+  const [moment, hash, ...description] = line.split(" - ");
+  const [date, time] = moment.split(" ");
+  if (currentOutputDate !== date) {
+    writeln("");
+    writeln(bold(date));
+    currentOutputDate = date;
+  }
+  writeln(yellow(time) + " - " + hash + " - " + description);
+});
